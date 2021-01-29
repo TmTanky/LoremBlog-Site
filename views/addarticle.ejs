@@ -1,0 +1,35 @@
+<%- include(`header`) %>
+
+<div class="backtome">
+    <button class="addbtn3"> <a href="/admin/me"> Back </a> </button>
+</div>
+
+<form action="/admin/addarticle" method="post" class="addarticle">
+
+    <h1> Add article </h1>
+
+    <% if (typeof errors != `undefined`) { %>
+        <% errors.forEach(function(error) { %>
+    
+                   <% let errorType %>
+                   
+                   <% if (error.msg === `Please Log in first.` ) { %>
+                   <%     errorType = `alert-danger` %>
+                   <% } else { %>
+                   <%     errorType = `alert-warning` %>
+                   <% } %>
+
+            <div class="alert <%= errorType %> alert-dismissible fade show" role="alert">
+                <%= error.msg %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+        <% }) %>
+    <% } %>
+
+    <input type="text" name="name" class="artname" placeholder="Article name">
+    <textarea placeholder="Article description..." name="description" cols="30" rows="10" class="artdesc"></textarea>
+
+    <button type="submit" class="addbtn"> Add </button>
+</form>
+
+<%- include(`footer`) %>

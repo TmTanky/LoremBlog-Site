@@ -1,0 +1,21 @@
+<%- include(`header`) %>
+
+<div class="artbox">
+
+    <% for (items of articles) { %>
+
+        <div class="artcards">
+            <h1> <%= items.name %> </h1>
+            <p> Author: <span class="authorname"> <%= items.createdBy[0].name %> </span> </p>
+
+            <form action="/articles/<%= items._id %>" method="get">
+                <button class="seemore"> Read more</button>
+            </form>
+
+        </div>
+        
+    <% } %>
+
+</div>
+
+<%- include(`footer`) %>

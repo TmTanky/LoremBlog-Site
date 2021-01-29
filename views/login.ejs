@@ -1,0 +1,43 @@
+<%- include(`header`) %>
+
+<div class="loginbox">
+    
+    <form action="/admin/login" method="post" class="loginform">
+
+        <h1> LoremBlog Admin Login </h1>
+
+        <% if (typeof errors != `undefined`) { %>
+            <% errors.forEach(function(error) { %>
+
+               <% let errorType %>
+               
+               <% if (error.msg === `Please Log in first.` ) { %>
+               <%     errorType = `alert-danger` %>
+               <% } else { %>
+               <%     errorType = `alert-warning` %>
+               <% } %>
+
+                <div class="alert <%= errorType %> alert-dismissible fade show" role="alert"> 
+                    <%= error.msg %>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+            <% }) %>
+        <% } %>
+
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+
+        <div class="buttonsopt">
+            <button type="submit" class="loginbtn"> Login </button>
+            <!-- <button class="addbtn2"> <a href="/admin/register"> Register </a></button> -->
+            <a href="/admin/register" class="regislink"> Register </a> 
+        </div>
+
+        
+    </form>
+
+
+</div>
+
+<%- include(`footer`) %>
+

@@ -1,0 +1,32 @@
+<%- include(`header`) %>
+
+<div class="backtome">
+    <button class="addbtn3"> <a href="/admin/me"> Back </a> </button>
+</div>
+
+<div class="editme">
+
+    <form action="/admin/me/editprofile" method="post" class="editmeform">
+
+        <h1 class="edith1name"> Edit My Profile </h1>
+
+        <% if (typeof errors != `undefined`) { %>
+            <% errors.forEach(function(error) { %>
+    
+                <div class="alert alert-warning alert-dismissible fade show" role="alert"> 
+                    <%= error.msg %>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                  
+            <% }) %>
+        <% } %>
+
+        <input type="text" name="name" value="<%= namers %>">
+
+        <button type="submit" class="updatemebtn"> Update </button>
+
+    </form>
+
+</div>
+
+<%- include(`footer`) %>

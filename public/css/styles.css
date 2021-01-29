@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+:root {
+    --small: 'Open Sans', sans-serif;
+    --title: 'Playfair Display', serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* adminlogin ejs */
+
+.regislink {
+    margin: auto 1rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    font-family: var(--small);
+}
+
+.loginbox {
+    display: flex;
+    padding: 10rem 8rem;
+}
+
+.loginform {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.loginform h1 {
+    font-family: var(--title);
+    font-size: 3rem;
+}
+
+.loginform input {
+    margin: 0.3rem 0rem;
+    padding: 0.5rem;
+    width: 50%;
+    font-family: var(--small);
+    border-radius: 3px;
+    border: none;
+    background-color: whitesmoke;
+}
+
+.loginbtn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-family: var(--small);
+    background-color: black;
+    color: white;
+    border: none;
+    width: 100%;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.loginbtn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.addbtn2 {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-family: var(--small);
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.addbtn2 a {
+    color: white;
+    text-decoration: none;
+}
+
+.addbtn2:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.buttonsopt {
+    display: flex;
+}
+
+/* add article ejs */
+
+.addbtn3 {
+    width: 6%;
+    padding: 0.5rem 1rem;
+    font-family: var(--small);
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.addbtn3 a {
+    color: white;
+    text-decoration: none;
+}
+
+.addbtn3:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.addarticle {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 4rem;
+}
+
+.addarticle h1 {
+    font-family: var(--small);
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.artname, .artdesc {
+    display: block;
+    width: 50%;
+    margin: 0.2rem 0rem;
+    padding: 0.5rem;
+    font-family: var(--small);
+}
+
+.addbtn {
+    width: 10%;
+    padding: 0.5rem 1rem;
+    font-family: var(--small);
+    text-transform: uppercase;
+    margin-top: 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.addbtn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* root ejs */
+
+.artcards {
+    padding: 4rem 2rem;
+    margin: 1rem 3rem;
+    border: rgb(218, 214, 214) solid 1px;
+    border-radius: 5px;
+}
+
+.artcards h1 {
+    font-family: var(--title);
+    font-size: 4rem;
+}
+
+.artcards p {
+    font-family: var(--small);
+    font-size: 1rem;
+}
+
+.seemore {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-family: var(--small);
+    background-color: black;
+    color: white;
+    border: none;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.seemore:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* previewarticle ejs */
+
+.previewbox {
+    padding: 8rem 4rem;
+}
+
+.previewbox h1 {
+    font-family: var(--title);
+    font-size: 5rem;
+}
+
+.previewbox p {
+    font-family: var(--small);
+    font-size: 2rem;
+}
+
+.previewbox a {
+    color: white;
+    text-decoration: none;
+}
+
+/* me ejs */
+
+.mebox {
+    padding: 5rem 4rem;
+    display: flex;
+}
+
+.melinks, .meinfo {
+    display: flex;
+    flex-direction: column;
+    padding: 10rem 1rem;
+}
+
+.melinks {
+    flex: 1;
+    border-right: black solid 1px;
+}
+
+.melinks a {
+    font-family: var(--small);
+}
+
+.melinks h1 {
+    font-family: var(--title);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.meinfo {
+    flex: 3;
+    justify-content: center;
+    text-align: center;
+}
+
+.meinfo h1 {
+    font-size: 4rem;
+    font-family: var(--small);
+    text-transform: uppercase;
+}
+
+/* editmyprofile ejs */
+
+.editme {
+    padding: 5rem 2rem;
+}
+
+.edith1name {
+    margin: 2rem 0rem;
+}
+
+.editme .editmeform input {
+    margin: 1rem 0rem;
+    width: 30%;
+    border-radius: 5px;
+    border: none;
+    background-color: whitesmoke;
+    padding: 0.5rem;
+}
+
+.editmeform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 2rem;
+}
+
+.updatemebtn {
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 0.3rem 1rem;
+    font-family: var(--small);
+    border-radius: 5px;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.updatemebtn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.rooth1 {
+    margin-bottom: 5rem;
+}
+
+.alert {
+    width: 50%;
+}
+

@@ -1,0 +1,17 @@
+<%- include(`header`) %>
+
+<div class="mebox">
+    <div class="melinks">
+
+        <h1> My Profile </h1>
+        <a href="/admin/me/editprofile"> Edit my Profile </a>
+        <a href="/admin/addarticle"> Post an Article</a>
+        <a href="/admin/logout"> Logout </a>
+    </div>
+
+    <div class="meinfo">
+        <h1> Welcome <strong> <%= adminName %> </strong> </h1>
+    </div>
+</div>
+
+<%- include(`footer`) %>
